@@ -17,6 +17,7 @@
     "mysql2": "3.6.5",
     "moment-timezone": "0.5.43",
     "axios": "1.6.2",
-    "moment": "2.29.4"
+    "moment": "2.29.4",
+    "xlsx": "0.18.5"
   }
 }

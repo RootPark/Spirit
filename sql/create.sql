@@ -21,7 +21,8 @@ DROP TABLE IF EXISTS spirit.university;
 CREATE TABLE IF NOT EXISTS spirit.university (
     univId INT NOT NULL AUTO_INCREMENT,
     univName VARCHAR(30),
-    univCount INT,
+    univBranch VARCHAR(10),
+    studentCount INT NOT NULL DEFAULT 0,
     created DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP(),
     PRIMARY KEY(univId)
 );
@@ -32,6 +33,7 @@ CREATE TABLE IF NOT EXISTS spirit.major (
     majorId INT NOT NULL AUTO_INCREMENT,
     univId INT,
     univName VARCHAR(30),
+    univBranch VARCHAR(10),
     majorName VARCHAR(50),
     created DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP(),
     PRIMARY KEY(majorId)
@@ -41,10 +43,7 @@ CREATE TABLE IF NOT EXISTS spirit.major (
 
 
 INSERT INTO spirit.user(userName, userPhone, univId)
-VALUES('박근원', '010-9880-6010', 1);
+VALUES('박근원', '010-9880-6010', 163);
 
-INSERT INTO spirit.university(univName, univCount)
-VALUES('한양대학교', 1);
-
-INSERT INTO spirit.major(univId, univName, majorName)
-VALUES(1, '한양대학교', '컴퓨터소프트웨어학부');
+INSERT INTO spirit.major(univId, univName, univBranch, majorName)
+VALUES(1, '한양대학교', '본교', '컴퓨터소프트웨어학부');

@@ -9,6 +9,7 @@ import cors from 'cors';
 import config from './config/config.js';
 import { consoleBar, timeLog } from './config/common.js';
 import { ping } from './controller/system.js';
+import { updateUnivWithExcel } from './dataSet/univData.js';
 
 
 // ------------------ router set -----------------
@@ -24,6 +25,9 @@ const router = express.Router();
 
 router.route('/ping').get(ping);
 
+// -------------------- macro --------------------
+
+updateUnivWithExcel();
 
 // ---------------- server start -----------------
 
