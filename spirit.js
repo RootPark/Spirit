@@ -27,7 +27,7 @@ router.route('/ping').get(ping);
 
 // -------------------- macro --------------------
 
-updateUnivWithExcel();
+// updateUnivWithExcel();
 
 // ---------------- server start -----------------
 
